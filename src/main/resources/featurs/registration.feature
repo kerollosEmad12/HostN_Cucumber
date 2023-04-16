@@ -26,3 +26,12 @@ Feature: Test Automation Functionality
         And User Enter valid email
         And User Enter valid password and confirm password
         Then New Account is created successfully
+
+        Scenario: User could Create new account with invalid data (Invalid phone number ) (Negative scenario)
+          Given StepA User Navigate to home page
+          And StepB User Click on signup button
+          And StepC user enter valid last name first name
+          And StepE User Enter phone number missing number
+          And StepF User Enter valid email
+          And StepG User Enter valid password and confirm password
+          Then StepH New Account is created successfully

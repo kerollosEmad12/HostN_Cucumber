@@ -15,7 +15,7 @@ public class SingUp {
 
     JavascriptExecutor js = (JavascriptExecutor) driver;
     @Given("user navigate to home page")
-    public void step1()
+    public void userNavigateToHomepage()
     {
         driver.navigate().to("https://api.host-n.com/");
     }
@@ -186,6 +186,65 @@ public class SingUp {
 
     @Then("New Account is created successfully")
     public void new_AccountIsCreatedSuccessfully()
+    {
+        //Click on Create Account Btn
+        WebElement Btn = driver.findElement(By.cssSelector("button[type=\"submit\"]"));
+        js.executeScript("arguments[0].click();", Btn);
+    }
+
+    @Given("StepA User Navigate to home page")
+    public void step1()
+    {
+        driver.navigate().to("https://api.host-n.com/");
+    }
+
+    @And("StepB User Click on signup button")
+    public void step2()
+    {
+        driver.findElement(By.cssSelector("a[href=\"https://api.host-n.com/register\"]")).click();
+    }
+
+    @And("StepC user enter valid last name first name")
+    public void step3() throws InterruptedException {
+        WebElement first = driver.findElement(By.cssSelector("input[name=\"first_name\"]"));
+        js.executeScript("arguments[0].value='fabrica';", first);
+        Thread.sleep(Duration.ofSeconds(1));
+
+        //Input valid last name
+        WebElement last = driver.findElement(By.cssSelector("input[name=\"last_name\"]"));
+        js.executeScript("arguments[0].value='CS';", last);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @And("StepE User Enter phone number missing number")
+    public void step4() throws InterruptedException {
+        WebElement num = driver.findElement(By.cssSelector("input[name=\"mobile\"]"));
+        js.executeScript("arguments[0].value='0109313667';", num);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @And("StepF User Enter valid email")
+    public void step5() throws InterruptedException {
+        WebElement email = driver.findElement(By.cssSelector("input[name=\"email\"]"));
+        js.executeScript("arguments[0].value='Test.43@gmail.com';", email);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @And("StepG User Enter valid password and confirm password")
+    public void step6() throws InterruptedException {
+        //Enter valid password
+        WebElement pass = driver.findElement(By.name("password"));
+        pass.sendKeys("123456789");
+        Thread.sleep(Duration.ofSeconds(1));
+
+        //Enter confirm password
+        WebElement ConfirmPass = driver.findElement(By.cssSelector("input[name=\"confirm_password\"]"));
+        js.executeScript("arguments[0].value='123456789';", ConfirmPass);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @Then("StepH New Account is created successfully")
+    public void step7()
     {
         //Click on Create Account Btn
         WebElement Btn = driver.findElement(By.cssSelector("button[type=\"submit\"]"));
