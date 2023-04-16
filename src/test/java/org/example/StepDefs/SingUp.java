@@ -74,4 +74,62 @@ public class SingUp {
     }
 
 
+    @Given("User navigate to home page")
+    public void userNavigateToHomePage()
+    {
+        driver.navigate().to("https://api.host-n.com/");
+    }
+
+    @And("User click on signup button")
+    public void UserClickOnSignupButton()
+    {
+        driver.findElement(By.cssSelector("a[href=\"https://api.host-n.com/register\"]")).click();
+    }
+
+    @And("user enter valid last name an empty first name")
+    public void userEnterValidLastNameAnEmptyFirstName() throws InterruptedException {
+        WebElement first = driver.findElement(By.cssSelector("input[name=\"first_name\"]"));
+        js.executeScript("arguments[0].value='';", first);
+        Thread.sleep(Duration.ofSeconds(1));
+
+        //Input valid last name
+        WebElement last = driver.findElement(By.cssSelector("input[name=\"last_name\"]"));
+        js.executeScript("arguments[0].value='CS';", last);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @And("User enter valid number")
+    public void UserEnterValidNumber() throws InterruptedException {
+        WebElement num = driver.findElement(By.cssSelector("input[name=\"mobile\"]"));
+        js.executeScript("arguments[0].value='01093136673';", num);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @And("User enter valid email")
+    public void UserEnterValidEmail() throws InterruptedException {
+        WebElement email = driver.findElement(By.cssSelector("input[name=\"email\"]"));
+        js.executeScript("arguments[0].value='test43@gmail.com';", email);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @And("User enter valid password and confirm password")
+    public void UserEnterValidPasswordAndConfirmPassword() throws InterruptedException {
+        //Enter valid password
+        WebElement pass = driver.findElement(By.name("password"));
+        pass.sendKeys("123456789");
+        Thread.sleep(Duration.ofSeconds(1));
+
+        //Enter confirm password
+        WebElement ConfirmPass = driver.findElement(By.cssSelector("input[name=\"confirm_password\"]"));
+        js.executeScript("arguments[0].value='123456789';", ConfirmPass);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @Then("New account is created successfully")
+    public void NewAccountIsCreatedSuccessfully()
+    {
+        //Click on Create Account Btn
+        WebElement Btn = driver.findElement(By.cssSelector("button[type=\"submit\"]"));
+        js.executeScript("arguments[0].click();", Btn);
+    }
 }
