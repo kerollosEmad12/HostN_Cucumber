@@ -1,4 +1,4 @@
-Feature: Test Automation Functionality
+ Feature: Test Automation Functionality
 
   Scenario: user could Create new account with valid data (Positive scenario)
     Given user navigate to home page
@@ -44,3 +44,21 @@ Feature: Test Automation Functionality
     And stepF User Enter valid email
     And stepG User Enter valid password and confirm password
     Then stepH New Account is created successfully
+
+    Scenario: User could Create new account with invalid data (Invalid phone number format) (Negative scenario)
+      Given step[A] User Navigate to home page
+      And step[B] User Click on signup button
+      And step[C] user enter valid last name first name
+      And stepE User Enter invalid number format
+      And step[F] User Enter valid email
+      And step[G] User Enter valid password and confirm password
+      Then step[H] New Account is created successfully
+
+    Scenario:  User could Create new account with invalid data (Password and confirm password is an empty) (Negative scenario)
+      Given Step[A] User Navigate to home page
+      And Step[B] User Click on signup button
+      And Step[C] user enter valid last name first name
+      And Step[E] User Enter valid number
+      And Step[F] User Enter valid email
+      And step[G] User Enter password and confirm password is an empty
+      Then Step[H] New Account is created successfully

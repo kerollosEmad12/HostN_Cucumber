@@ -1,5 +1,6 @@
 package org.example.StepDefs;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,6 +13,8 @@ import java.time.Duration;
 import static org.example.StepDefs.Hooks.driver;
 
 public class SingUp {
+
+    public static String globalEmail;
 
     JavascriptExecutor js = (JavascriptExecutor) driver;
     @Given("user navigate to home page")
@@ -304,6 +307,128 @@ public class SingUp {
 
     @Then("stepH New Account is created successfully")
     public void stepHNewAccountIsCreatedSuccessfully()
+    {
+        //Click on Create Account Btn
+        WebElement Btn = driver.findElement(By.cssSelector("button[type=\"submit\"]"));
+        js.executeScript("arguments[0].click();", Btn);
+    }
+
+    @Given("step[A] User Navigate to home page")
+    public void stepA_UserNavigateToHomePage()
+    {
+        driver.navigate().to("https://api.host-n.com/");
+    }
+
+    @And("step[B] User Click on signup button")
+    public void stepB_UserClickOnSignupButton()
+    {
+        driver.findElement(By.cssSelector("a[href=\"https://api.host-n.com/register\"]")).click();
+    }
+
+    @And("step[C] user enter valid last name first name")
+    public void stepC_UserEnterValidLastNameFirstName() throws InterruptedException {
+        WebElement first = driver.findElement(By.cssSelector("input[name=\"first_name\"]"));
+        js.executeScript("arguments[0].value='fabrica';", first);
+        Thread.sleep(Duration.ofSeconds(1));
+
+        //Input valid last name
+        WebElement last = driver.findElement(By.cssSelector("input[name=\"last_name\"]"));
+        js.executeScript("arguments[0].value='CS';", last);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @And("stepE User Enter invalid number format")
+    public void stepE_UserEnterInvalidNumberFormat() throws InterruptedException {
+        WebElement num = driver.findElement(By.cssSelector("input[name=\"mobile\"]"));
+        js.executeScript("arguments[0].value='010893';", num);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @And("step[F] User Enter valid email")
+    public void stepF_UserEnterValidEmail() throws InterruptedException {
+        Faker faker = new Faker();
+        globalEmail = faker.internet().emailAddress();
+        WebElement email = driver.findElement(By.cssSelector("input[name=\"email\"]"));
+        email.sendKeys(globalEmail);
+        Thread.sleep(Duration.ofSeconds(3));
+    }
+
+    @And("step[G] User Enter valid password and confirm password")
+    public void stepG_UserEnterValidPasswordAndConfirmPassword() throws InterruptedException {
+        //Enter valid password
+        WebElement pass = driver.findElement(By.name("password"));
+        pass.sendKeys("123456789");
+        Thread.sleep(Duration.ofSeconds(1));
+
+        //Enter confirm password
+        WebElement ConfirmPass = driver.findElement(By.cssSelector("input[name=\"confirm_password\"]"));
+        js.executeScript("arguments[0].value='123456789';", ConfirmPass);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @Then("step[H] New Account is created successfully")
+    public void stepH_NewAccountIsCreatedSuccessfully()
+    {
+        //Click on Create Account Btn
+        WebElement Btn = driver.findElement(By.cssSelector("button[type=\"submit\"]"));
+        js.executeScript("arguments[0].click();", Btn);
+    }
+
+    @Given("Step[A] User Navigate to home page")
+    public void step_AUserNavigateToHomePage()
+    {
+        driver.navigate().to("https://api.host-n.com/");
+    }
+
+    @And("Step[B] User Click on signup button")
+    public void stepBUserClickOnSignupButton()
+    {
+        driver.findElement(By.cssSelector("a[href=\"https://api.host-n.com/register\"]")).click();
+    }
+
+    @And("Step[C] user enter valid last name first name")
+    public void step_CUserEnterValidLastNameFirstName() throws InterruptedException {
+        WebElement first = driver.findElement(By.cssSelector("input[name=\"first_name\"]"));
+        js.executeScript("arguments[0].value='fabrica';", first);
+        Thread.sleep(Duration.ofSeconds(1));
+
+        //Input valid last name
+        WebElement last = driver.findElement(By.cssSelector("input[name=\"last_name\"]"));
+        js.executeScript("arguments[0].value='CS';", last);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @And("Step[E] User Enter valid number")
+    public void stepEUserEnterValidNumber() throws InterruptedException {
+        WebElement num = driver.findElement(By.cssSelector("input[name=\"mobile\"]"));
+        js.executeScript("arguments[0].value='01033584776';", num);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @And("Step[F] User Enter valid email")
+    public void step_FUserEnterValidEmail() throws InterruptedException {
+        Faker faker = new Faker();
+        globalEmail = faker.internet().emailAddress();
+        WebElement email = driver.findElement(By.cssSelector("input[name=\"email\"]"));
+        email.sendKeys(globalEmail);
+        Thread.sleep(Duration.ofSeconds(3));
+    }
+
+    @And("step[G] User Enter password and confirm password is an empty")
+    public void stepGUserEnterPasswordAndConfirmPasswordIsAnEmpty() throws InterruptedException {
+        //Enter valid password
+        WebElement pass = driver.findElement(By.name("password"));
+        js.executeScript("arguments[0].value='';", pass);
+        Thread.sleep(Duration.ofSeconds(1));
+
+        //Enter confirm password
+        WebElement ConfirmPass = driver.findElement(By.cssSelector("input[name=\"confirm_password\"]"));
+        js.executeScript("arguments[0].value='';", ConfirmPass);
+        Thread.sleep(Duration.ofSeconds(1));
+    }
+
+    @Then("Step[H] New Account is created successfully")
+    public void step_HNewAccountIsCreatedSuccessfully()
     {
         //Click on Create Account Btn
         WebElement Btn = driver.findElement(By.cssSelector("button[type=\"submit\"]"));
