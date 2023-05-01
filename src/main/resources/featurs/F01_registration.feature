@@ -1,5 +1,7 @@
- Feature: Test Automation Functionality
+@regression
+Feature: Test Automation Functionality
 
+  @smoke
   Scenario: user could Create new account with valid data (Positive scenario)
     Given user navigate to home page
     And user click on signup button
