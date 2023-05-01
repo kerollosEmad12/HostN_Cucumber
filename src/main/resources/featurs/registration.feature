@@ -1,4 +1,4 @@
-0Feature: Test Automation Functionality
+ Feature: Test Automation Functionality
 
   Scenario: user could Create new account with valid data (Positive scenario)
     Given user navigate to home page
