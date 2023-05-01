@@ -62,3 +62,21 @@
       And Step[F] User Enter valid email
       And step[G] User Enter password and confirm password is an empty
       Then Step[H] New Account is created successfully
+
+    Scenario:  User could Create new account with invalid data (Password is invalid format) (Negative scenario)
+      Given STep[A] User Navigate to home page
+      And STep[B] User Click on signup button
+      And STep[C] user enter valid last name first name
+      And STep[E] User Enter valid number
+      And STep[F] User Enter valid email
+      And step[G] User Enter invalid password format and valid confirm password
+      Then STep[H] New Account is created successfully
+
+    Scenario:  User could Create new account with invalid data (Confirm Password is invalid format) (Negative scenario)
+      Given STEp[A] User Navigate to home page
+      And STEp[B] User Click on signup button
+      And STEp[C] user enter valid last name first name
+      And STEp[E] User Enter valid number
+      And STEp[F] User Enter valid email
+      And step[G] User Enter valid password format and invalid confirm password format
+      Then STEp[H] New Account is created successfully
