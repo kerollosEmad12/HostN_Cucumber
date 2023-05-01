@@ -5,6 +5,8 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.Color;
+import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 import static org.example.StepDefs.Hooks.driver;
@@ -76,6 +78,27 @@ public class Login {
     {
         WebElement Btn = driver.findElement(By.cssSelector("button[type=\"submit\"]"));
         js.executeScript("arguments[0].click();", Btn);
+
+
+        SoftAssert soft = new SoftAssert();
+        //1- assert url equal or contains https://dev-api.host-n.com/login
+        String actualUrl = driver.getCurrentUrl();
+        soft.assertTrue(actualUrl.contains("https://dev-api.host-n.com/login"),
+                "actual result : "+actualUrl + "  " + "expected result : " +  "https://dev-api.host-n.com/login"
+            );
+
+        //2- message content or equal "Login credential are invalid."
+        String actualMsg = driver.findElement(By.cssSelector("div[class=\"alert alert-danger\"]")).getText();
+        soft.assertTrue(actualMsg.contains("Login credential are invalid."),
+                "actualMsg : "+actualMsg + " | " + "expected Msg : "+"Login credential are invalid."
+        );
+        //3- message color is green using RGBA or Hex
+        String actualColorRGBA = driver.findElement(By.cssSelector("div[class=\"alert alert-danger\"]")).getCssValue("border-color");
+        String actualColorHex = Color.fromString(actualColorRGBA).asHex();
+        soft.assertEquals(actualColorHex, "#f5c6cb");
+
+        //4- assertAll()
+        soft.assertAll();
     }
 
     @Given("User[A] Navigate To Home page")
@@ -109,6 +132,26 @@ public class Login {
     {
         WebElement Btn = driver.findElement(By.cssSelector("button[type=\"submit\"]"));
         js.executeScript("arguments[0].click();", Btn);
+
+        SoftAssert soft = new SoftAssert();
+        //1- assert url equal or contains https://dev-api.host-n.com/login
+        String actualUrl = driver.getCurrentUrl();
+        soft.assertTrue(actualUrl.contains("https://dev-api.host-n.com/login"),
+                "actual result : "+actualUrl + "  " + "expected result : " +  "https://dev-api.host-n.com/login"
+        );
+
+        //2- message content or equal "Login credential are invalid."
+        String actualMsg = driver.findElement(By.cssSelector("div[class=\"alert alert-danger\"]")).getText();
+        soft.assertTrue(actualMsg.contains("Login credential are invalid."),
+                "actualMsg : "+actualMsg + " | " + "expected Msg : "+"Login credential are invalid."
+        );
+        //3- message color is green using RGBA or Hex
+        String actualColorRGBA = driver.findElement(By.cssSelector("div[class=\"alert alert-danger\"]")).getCssValue("border-color");
+        String actualColorHex = Color.fromString(actualColorRGBA).asHex();
+        soft.assertEquals(actualColorHex, "#f5c6cb");
+
+        //4- assertAll()
+        soft.assertAll();
     }
 
     @Given("User[A] Navigate To Home Page")
@@ -175,6 +218,26 @@ public class Login {
     {
         WebElement Btn = driver.findElement(By.cssSelector("button[type=\"submit\"]"));
         js.executeScript("arguments[0].click();", Btn);
+
+        SoftAssert soft = new SoftAssert();
+        //1- assert url equal or contains https://dev-api.host-n.com/login
+        String actualUrl = driver.getCurrentUrl();
+        soft.assertTrue(actualUrl.contains("https://dev-api.host-n.com/login"),
+                "actual result : "+actualUrl + "  " + "expected result : " +  "https://dev-api.host-n.com/login"
+        );
+
+        //2- message content or equal "Login credential are invalid."
+        String actualMsg = driver.findElement(By.cssSelector("div[class=\"alert alert-danger\"]")).getText();
+        soft.assertTrue(actualMsg.contains("Login credential are invalid."),
+                "actualMsg : "+actualMsg + " | " + "expected Msg : "+"Login credential are invalid."
+        );
+        //3- message color is green using RGBA or Hex
+        String actualColorRGBA = driver.findElement(By.cssSelector("div[class=\"alert alert-danger\"]")).getCssValue("border-color");
+        String actualColorHex = Color.fromString(actualColorRGBA).asHex();
+        soft.assertEquals(actualColorHex, "#f5c6cb");
+
+        //4- assertAll()
+        soft.assertAll();
     }
 
     @Given("USER[A] Navigate To Home Page")
@@ -208,5 +271,15 @@ public class Login {
     {
         WebElement Btn = driver.findElement(By.cssSelector("button[type=\"submit\"]"));
         js.executeScript("arguments[0].click();", Btn);
+
+        SoftAssert soft = new SoftAssert();
+        //1- assert url equal or contains https://dev-api.host-n.com/login
+        String actualUrl = driver.getCurrentUrl();
+        soft.assertTrue(actualUrl.contains("https://dev-api.host-n.com/login"),
+                "actual result : "+actualUrl + "  " + "expected result : " +  "https://dev-api.host-n.com/login"
+        );
+
+        //4- assertAll()
+        soft.assertAll();
     }
 }
