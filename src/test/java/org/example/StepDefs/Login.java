@@ -279,7 +279,6 @@ public class Login {
                 "actual result : "+actualUrl + "  " + "expected result : " +  "https://dev-api.host-n.com/login"
         );
 
-
         //4- assertAll()
         soft.assertAll();
     }
