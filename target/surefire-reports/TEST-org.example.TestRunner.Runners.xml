@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.TestRunner.Runners" time="559.207" tests="15" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Fabrica Dev\IdeaProjects\HostN_Project\target\test-classes;C:\Users\Fabrica Dev\IdeaProjects\HostN_Project\target\classes;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-java\4.8.3\selenium-java-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-api\4.8.3\selenium-api-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.8.3\selenium-chrome-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Fabrica Dev\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.8.3\selenium-chromium-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-json\4.8.3\selenium-json-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.8.3\selenium-manager-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v109\4.8.3\selenium-devtools-v109-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v110\4.8.3\selenium-devtools-v110-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v111\4.8.3\selenium-devtools-v111-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.8.3\selenium-devtools-v85-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.8.3\selenium-edge-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.8.3\selenium-firefox-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-http\4.8.3\selenium-http-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\dev\failsafe\failsafe\3.3.1\failsafe-3.3.1.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.8.3\selenium-ie-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.8.3\selenium-remote-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-buffer\4.1.90.Final\netty-buffer-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-codec-http\4.1.90.Final\netty-codec-http-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-codec\4.1.90.Final\netty-codec-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-handler\4.1.90.Final\netty-handler-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-common\4.1.90.Final\netty-common-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.90.Final\netty-transport-classes-epoll-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.90.Final\netty-transport-classes-kqueue-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-native-epoll\4.1.90.Final\netty-transport-native-epoll-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.90.Final\netty-transport-native-kqueue-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.90.Final\netty-transport-native-unix-common-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport\4.1.90.Final\netty-transport-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-resolver\4.1.90.Final\netty-resolver-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-api\1.24.0\opentelemetry-api-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-context\1.24.0\opentelemetry-context-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.24.0\opentelemetry-exporter-logging-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.24.0\opentelemetry-sdk-metrics-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.24.0-alpha\opentelemetry-sdk-logs-1.24.0-alpha.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-api-logs\1.24.0-alpha\opentelemetry-api-logs-1.24.0-alpha.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.24.0-alpha\opentelemetry-api-events-1.24.0-alpha.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.24.0\opentelemetry-sdk-common-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.24.0\opentelemetry-sdk-extension-autoconfigure-spi-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.24.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.24.0-alpha.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.24.0\opentelemetry-sdk-trace-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.24.0\opentelemetry-sdk-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.24.0-alpha\opentelemetry-semconv-1.24.0-alpha.jar;C:\Users\Fabrica Dev\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\Fabrica Dev\.m2\repository\net\bytebuddy\byte-buddy\1.14.2\byte-buddy-1.14.2.jar;C:\Users\Fabrica Dev\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\Fabrica Dev\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\Fabrica Dev\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\Fabrica Dev\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.8.3\selenium-safari-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-support\4.8.3\selenium-support-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-java\7.11.2\cucumber-java-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-core\7.11.2\cucumber-core-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-gherkin\7.11.2\cucumber-gherkin-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.11.2\cucumber-gherkin-messages-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\gherkin\26.0.3\gherkin-26.0.3.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\messages\21.0.1\messages-21.0.1.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\tag-expressions\5.0.1\tag-expressions-5.0.1.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\datatable\7.11.2\datatable-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-plugin\7.11.2\cucumber-plugin-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\docstring\7.11.2\docstring-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\html-formatter\20.2.1\html-formatter-20.2.1.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\junit-xml-formatter\0.1.0\junit-xml-formatter-0.1.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\ci-environment\9.1.0\ci-environment-9.1.0.jar;C:\Users\Fabrica Dev\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-testng\7.11.2\cucumber-testng-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\org\testng\testng\7.7.1\testng-7.7.1.jar;C:\Users\Fabrica Dev\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Fabrica Dev\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\Fabrica Dev\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\Fabrica Dev\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\Fabrica Dev\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\Fabrica Dev\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\Fabrica Dev\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Africa/Cairo"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Users\Fabrica Dev\.jdks\openjdk-19.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\Fabrica Dev\AppData\Local\Temp\surefire1496272206254546838\surefirebooter-20230502145952909_3.jar C:\Users\Fabrica Dev\AppData\Local\Temp\surefire1496272206254546838 2023-05-02T14-59-52_605-jvmRun1 surefire-20230502145952909_1tmp surefire_0-20230502145952909_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Fabrica Dev\IdeaProjects\HostN_Project\target\test-classes;C:\Users\Fabrica Dev\IdeaProjects\HostN_Project\target\classes;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-java\4.8.3\selenium-java-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-api\4.8.3\selenium-api-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.8.3\selenium-chrome-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Fabrica Dev\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\Fabrica Dev\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.8.3\selenium-chromium-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-json\4.8.3\selenium-json-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.8.3\selenium-manager-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v109\4.8.3\selenium-devtools-v109-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v110\4.8.3\selenium-devtools-v110-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v111\4.8.3\selenium-devtools-v111-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.8.3\selenium-devtools-v85-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.8.3\selenium-edge-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.8.3\selenium-firefox-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-http\4.8.3\selenium-http-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\dev\failsafe\failsafe\3.3.1\failsafe-3.3.1.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.8.3\selenium-ie-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.8.3\selenium-remote-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-buffer\4.1.90.Final\netty-buffer-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-codec-http\4.1.90.Final\netty-codec-http-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-codec\4.1.90.Final\netty-codec-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-handler\4.1.90.Final\netty-handler-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-common\4.1.90.Final\netty-common-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.90.Final\netty-transport-classes-epoll-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.90.Final\netty-transport-classes-kqueue-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-native-epoll\4.1.90.Final\netty-transport-native-epoll-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.90.Final\netty-transport-native-kqueue-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.90.Final\netty-transport-native-unix-common-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport\4.1.90.Final\netty-transport-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-resolver\4.1.90.Final\netty-resolver-4.1.90.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-api\1.24.0\opentelemetry-api-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-context\1.24.0\opentelemetry-context-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.24.0\opentelemetry-exporter-logging-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.24.0\opentelemetry-sdk-metrics-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.24.0-alpha\opentelemetry-sdk-logs-1.24.0-alpha.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-api-logs\1.24.0-alpha\opentelemetry-api-logs-1.24.0-alpha.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.24.0-alpha\opentelemetry-api-events-1.24.0-alpha.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.24.0\opentelemetry-sdk-common-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.24.0\opentelemetry-sdk-extension-autoconfigure-spi-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.24.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.24.0-alpha.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.24.0\opentelemetry-sdk-trace-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.24.0\opentelemetry-sdk-1.24.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.24.0-alpha\opentelemetry-semconv-1.24.0-alpha.jar;C:\Users\Fabrica Dev\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\Fabrica Dev\.m2\repository\net\bytebuddy\byte-buddy\1.14.2\byte-buddy-1.14.2.jar;C:\Users\Fabrica Dev\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\Fabrica Dev\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\Fabrica Dev\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\Fabrica Dev\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\Fabrica Dev\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.8.3\selenium-safari-driver-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\org\seleniumhq\selenium\selenium-support\4.8.3\selenium-support-4.8.3.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-java\7.11.2\cucumber-java-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-core\7.11.2\cucumber-core-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-gherkin\7.11.2\cucumber-gherkin-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.11.2\cucumber-gherkin-messages-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\gherkin\26.0.3\gherkin-26.0.3.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\messages\21.0.1\messages-21.0.1.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\tag-expressions\5.0.1\tag-expressions-5.0.1.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\datatable\7.11.2\datatable-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-plugin\7.11.2\cucumber-plugin-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\docstring\7.11.2\docstring-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\html-formatter\20.2.1\html-formatter-20.2.1.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\junit-xml-formatter\0.1.0\junit-xml-formatter-0.1.0.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\ci-environment\9.1.0\ci-environment-9.1.0.jar;C:\Users\Fabrica Dev\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Fabrica Dev\.m2\repository\io\cucumber\cucumber-testng\7.11.2\cucumber-testng-7.11.2.jar;C:\Users\Fabrica Dev\.m2\repository\org\testng\testng\7.7.1\testng-7.7.1.jar;C:\Users\Fabrica Dev\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Fabrica Dev\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\Fabrica Dev\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\Fabrica Dev\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\Fabrica Dev\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\Fabrica Dev\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\Fabrica Dev\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Fabrica Dev"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="C:\Users\Fabrica Dev\.jdks\openjdk-19.0.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Fabrica Dev\IdeaProjects\HostN_Project"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Fabrica Dev\AppData\Local\Temp\surefire1496272206254546838\surefirebooter-20230502145952909_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="19.0.2+7-44"/>
+    <property name="user.name" value="Fabrica Dev"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Fabrica Dev\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\FABRIC~1\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2022.3.2"/>
+    <property name="java.version" value="19.0.2"/>
+    <property name="user.dir" value="C:\Users\Fabrica Dev\IdeaProjects\HostN_Project"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\Fabrica Dev\.jdks\openjdk-19.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Users\ahmed\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Redis\;C:\Program Files (x86)\Paragon Software\LinuxFS for Windows\;C:\Program Files\dotnet\;C:\Users\Fabrica Dev\AppData\Local\Microsoft\WindowsApps;;C:\Users\Fabrica Dev\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.2\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="19.0.2+7-44"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="runScenario[&quot;user could Create new account with valid data (Positive scenario)&quot;, &quot;Test Automation Functionality&quot;](1)" classname="org.example.TestRunner.Runners" time="41.358">
+    <system-out><![CDATA[
+@regression @smoke
+Scenario: user could Create new account with valid data (Positive scenario) &amp#27;[90m# src/main/resources/features/F01_registration.feature:5&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser navigate to home page&amp#27;[0m                                          &amp#27;[90m# org.example.StepDefs.SingUp.userNavigateToHomepage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser click on signup button&amp#27;[0m                                           &amp#27;[90m# org.example.StepDefs.SingUp.userClickOnSignupButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser enter valid last name and first name&amp#27;[0m                             &amp#27;[90m# org.example.StepDefs.SingUp.userEnterValidLastNameAndFirstName()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser enter valid number&amp#27;[0m                                               &amp#27;[90m# org.example.StepDefs.SingUp.userEnterValidNumber()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser enter valid email&amp#27;[0m                                                &amp#27;[90m# org.example.StepDefs.SingUp.userEnterValidEmail()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser enter valid password and confirm password&amp#27;[0m                        &amp#27;[90m# org.example.StepDefs.SingUp.userEnterValidPasswordAndConfirmPassword()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mnew account is created successfully&amp#27;[0m                                  &amp#27;[90m# org.example.StepDefs.SingUp.newAccountIsCreatedSuccessfully()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 17880
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 2:59:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+May 02, 2023 3:00:35 PM org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;user could Create new account with invalid data (first name is an empty) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](2)" classname="org.example.TestRunner.Runners" time="43.792">
+    <system-out><![CDATA[
+@regression
+Scenario: user could Create new account with invalid data (first name is an empty) (Negative scenario) &amp#27;[90m# src/main/resources/features/F01_registration.feature:14&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser navigate to home page&amp#27;[0m                                                                     &amp#27;[90m# org.example.StepDefs.SingUp.userNavigateToHomePage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser click on signup button&amp#27;[0m                                                                      &amp#27;[90m# org.example.StepDefs.SingUp.UserClickOnSignupButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser enter valid last name an empty first name&amp#27;[0m                                                   &amp#27;[90m# org.example.StepDefs.SingUp.userEnterValidLastNameAnEmptyFirstName()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enter valid number&amp#27;[0m                                                                          &amp#27;[90m# org.example.StepDefs.SingUp.UserEnterValidNumber()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enter valid email&amp#27;[0m                                                                           &amp#27;[90m# org.example.StepDefs.SingUp.UserEnterValidEmail()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enter valid password and confirm password&amp#27;[0m                                                   &amp#27;[90m# org.example.StepDefs.SingUp.UserEnterValidPasswordAndConfirmPassword()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mNew account is created successfully&amp#27;[0m                                                             &amp#27;[90m# org.example.StepDefs.SingUp.NewAccountIsCreatedSuccessfully()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 8374
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:00:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;User could Create new account with invalid data (first name with one character) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](3)" classname="org.example.TestRunner.Runners" time="28.473">
+    <system-out><![CDATA[
+@regression
+Scenario: User could Create new account with invalid data (first name with one character) (Negative scenario) &amp#27;[90m# src/main/resources/features/F01_registration.feature:23&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser Navigate to home page&amp#27;[0m                                                                            &amp#27;[90m# org.example.StepDefs.SingUp.UserNavigateToHomePage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser Click on signup button&amp#27;[0m                                                                             &amp#27;[90m# org.example.StepDefs.SingUp.user_ClickOnSignupButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser enter valid last name with one character first name&amp#27;[0m                                                &amp#27;[90m# org.example.StepDefs.SingUp.userEnterValidLastNameWithOneCharacterFirstName()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser Enter valid number&amp#27;[0m                                                                                 &amp#27;[90m# org.example.StepDefs.SingUp.user_EnterValidNumber()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser Enter valid email&amp#27;[0m                                                                                  &amp#27;[90m# org.example.StepDefs.SingUp.user_EnterValidEmail()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser Enter valid password and confirm password&amp#27;[0m                                                          &amp#27;[90m# org.example.StepDefs.SingUp.user_EnterValidPasswordAndConfirmPassword()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mNew Account is created successfully&amp#27;[0m                                                                    &amp#27;[90m# org.example.StepDefs.SingUp.new_AccountIsCreatedSuccessfully()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 32913
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:01:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;User could Create new account with invalid data (Invalid phone number ) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](4)" classname="org.example.TestRunner.Runners" time="36.226">
+    <system-out><![CDATA[
+@regression
+Scenario: User could Create new account with invalid data (Invalid phone number ) (Negative scenario) &amp#27;[90m# src/main/resources/features/F01_registration.feature:32&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mStepA User Navigate to home page&amp#27;[0m                                                              &amp#27;[90m# org.example.StepDefs.SingUp.step1()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStepB User Click on signup button&amp#27;[0m                                                               &amp#27;[90m# org.example.StepDefs.SingUp.step2()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStepC user enter valid last name first name&amp#27;[0m                                                     &amp#27;[90m# org.example.StepDefs.SingUp.step3()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStepE User Enter phone number missing number&amp#27;[0m                                                    &amp#27;[90m# org.example.StepDefs.SingUp.step4()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStepF User Enter valid email&amp#27;[0m                                                                    &amp#27;[90m# org.example.StepDefs.SingUp.step5()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStepG User Enter valid password and confirm password&amp#27;[0m                                            &amp#27;[90m# org.example.StepDefs.SingUp.step6()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mStepH New Account is created successfully&amp#27;[0m                                                      &amp#27;[90m# org.example.StepDefs.SingUp.step7()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 26350
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:01:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;User could Create new account with invalid data (Empty phone number ) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](5)" classname="org.example.TestRunner.Runners" time="67.508">
+    <system-out><![CDATA[
+@regression
+Scenario: User could Create new account with invalid data (Empty phone number ) (Negative scenario) &amp#27;[90m# src/main/resources/features/F01_registration.feature:41&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mstepA User Navigate to home page&amp#27;[0m                                                            &amp#27;[90m# org.example.StepDefs.SingUp.stepAUserNavigateToHomePage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstepB User Click on signup button&amp#27;[0m                                                             &amp#27;[90m# org.example.StepDefs.SingUp.steBbUserClickOnSignupButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstepC user enter valid last name first name&amp#27;[0m                                                   &amp#27;[90m# org.example.StepDefs.SingUp.stepCUserEnterValidLastNameFirstName()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstepE User Enter number an empty&amp#27;[0m                                                              &amp#27;[90m# org.example.StepDefs.SingUp.stepEUserEnterNumberAnEmpty()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstepF User Enter valid email&amp#27;[0m                                                                  &amp#27;[90m# org.example.StepDefs.SingUp.stepFUserEnterValidEmail()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstepG User Enter valid password and confirm password&amp#27;[0m                                          &amp#27;[90m# org.example.StepDefs.SingUp.stepGUserEnterValidPasswordAndConfirmPassword()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstepH New Account is created successfully&amp#27;[0m                                                    &amp#27;[90m# org.example.StepDefs.SingUp.stepHNewAccountIsCreatedSuccessfully()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 7125
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:02:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;User could Create new account with invalid data (Invalid phone number format) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](6)" classname="org.example.TestRunner.Runners" time="35.551">
+    <system-out><![CDATA[
+@regression
+Scenario: User could Create new account with invalid data (Invalid phone number format) (Negative scenario) &amp#27;[90m# src/main/resources/features/F01_registration.feature:50&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mstep[A] User Navigate to home page&amp#27;[0m                                                                  &amp#27;[90m# org.example.StepDefs.SingUp.stepA_UserNavigateToHomePage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstep[B] User Click on signup button&amp#27;[0m                                                                   &amp#27;[90m# org.example.StepDefs.SingUp.stepB_UserClickOnSignupButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstep[C] user enter valid last name first name&amp#27;[0m                                                         &amp#27;[90m# org.example.StepDefs.SingUp.stepC_UserEnterValidLastNameFirstName()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstepE User Enter invalid number format&amp#27;[0m                                                                &amp#27;[90m# org.example.StepDefs.SingUp.stepE_UserEnterInvalidNumberFormat()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstep[F] User Enter valid email&amp#27;[0m                                                                        &amp#27;[90m# org.example.StepDefs.SingUp.stepF_UserEnterValidEmail()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstep[G] User Enter valid password and confirm password&amp#27;[0m                                                &amp#27;[90m# org.example.StepDefs.SingUp.stepG_UserEnterValidPasswordAndConfirmPassword()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mstep[H] New Account is created successfully&amp#27;[0m                                                          &amp#27;[90m# org.example.StepDefs.SingUp.stepH_NewAccountIsCreatedSuccessfully()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 3114
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:03:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;User could Create new account with invalid data (Password and confirm password is an empty) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](7)" classname="org.example.TestRunner.Runners" time="38.236">
+    <system-out><![CDATA[
+@regression
+Scenario: User could Create new account with invalid data (Password and confirm password is an empty) (Negative scenario) &amp#27;[90m# src/main/resources/features/F01_registration.feature:59&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mStep[A] User Navigate to home page&amp#27;[0m                                                                                &amp#27;[90m# org.example.StepDefs.SingUp.step_AUserNavigateToHomePage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStep[B] User Click on signup button&amp#27;[0m                                                                                 &amp#27;[90m# org.example.StepDefs.SingUp.stepBUserClickOnSignupButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStep[C] user enter valid last name first name&amp#27;[0m                                                                       &amp#27;[90m# org.example.StepDefs.SingUp.step_CUserEnterValidLastNameFirstName()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStep[E] User Enter valid number&amp#27;[0m                                                                                     &amp#27;[90m# org.example.StepDefs.SingUp.stepEUserEnterValidNumber()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStep[F] User Enter valid email&amp#27;[0m                                                                                      &amp#27;[90m# org.example.StepDefs.SingUp.step_FUserEnterValidEmail()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstep[G] User Enter password and confirm password is an empty&amp#27;[0m                                                        &amp#27;[90m# org.example.StepDefs.SingUp.stepGUserEnterPasswordAndConfirmPasswordIsAnEmpty()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mStep[H] New Account is created successfully&amp#27;[0m                                                                        &amp#27;[90m# org.example.StepDefs.SingUp.step_HNewAccountIsCreatedSuccessfully()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 26208
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:04:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;User could Create new account with invalid data (Password is invalid format) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](8)" classname="org.example.TestRunner.Runners" time="31.804">
+    <system-out><![CDATA[
+@regression
+Scenario: User could Create new account with invalid data (Password is invalid format) (Negative scenario) &amp#27;[90m# src/main/resources/features/F01_registration.feature:68&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mSTep[A] User Navigate to home page&amp#27;[0m                                                                 &amp#27;[90m# org.example.StepDefs.SingUp.stepAUser_NavigateToHomePage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSTep[B] User Click on signup button&amp#27;[0m                                                                  &amp#27;[90m# org.example.StepDefs.SingUp.stepBUser_ClickOnSignupButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSTep[C] user enter valid last name first name&amp#27;[0m                                                        &amp#27;[90m# org.example.StepDefs.SingUp.stepCUser_EnterValidLastNameFirstName()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSTep[E] User Enter valid number&amp#27;[0m                                                                      &amp#27;[90m# org.example.StepDefs.SingUp.stepEUser_EnterValidNumber()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSTep[F] User Enter valid email&amp#27;[0m                                                                       &amp#27;[90m# org.example.StepDefs.SingUp.stepFUser_EnterValidEmail()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstep[G] User Enter invalid password format and valid confirm password&amp#27;[0m                                &amp#27;[90m# org.example.StepDefs.SingUp.stepGUserEnterInvalidPasswordFormatAndValidConfirmPassword()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mSTep[H] New Account is created successfully&amp#27;[0m                                                         &amp#27;[90m# org.example.StepDefs.SingUp.stepHNewAccount_IsCreatedSuccessfully()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 36328
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:04:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;User could Create new account with invalid data (Confirm Password is invalid format) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](9)" classname="org.example.TestRunner.Runners" time="30.459">
+    <system-out><![CDATA[
+@regression
+Scenario: User could Create new account with invalid data (Confirm Password is invalid format) (Negative scenario) &amp#27;[90m# src/main/resources/features/F01_registration.feature:77&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mSTEp[A] User Navigate to home page&amp#27;[0m                                                                         &amp#27;[90m# org.example.StepDefs.SingUp.stepA_User_NavigateToHomePage()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSTEp[B] User Click on signup button&amp#27;[0m                                                                          &amp#27;[90m# org.example.StepDefs.SingUp.stepB_User_ClickOnSignupButton()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSTEp[C] user enter valid last name first name&amp#27;[0m                                                                &amp#27;[90m# org.example.StepDefs.SingUp.stepC_User_EnterValidLastNameFirstName()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSTEp[E] User Enter valid number&amp#27;[0m                                                                              &amp#27;[90m# org.example.StepDefs.SingUp.stepE_UserEnterValidNumber()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSTEp[F] User Enter valid email&amp#27;[0m                                                                               &amp#27;[90m# org.example.StepDefs.SingUp.stepF_User_EnterValidEmail()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mstep[G] User Enter valid password format and invalid confirm password format&amp#27;[0m                                 &amp#27;[90m# org.example.StepDefs.SingUp.stepGUserEnterValidPasswordFormatAndInvalidConfirmPasswordFormat()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mSTEp[H] New Account is created successfully&amp#27;[0m                                                                 &amp#27;[90m# org.example.StepDefs.SingUp.stepH_NewAccount_IsCreatedSuccessfully()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 17639
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:05:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;user could Create new account with invalid data (Keep phone number is an empty) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](10)" classname="org.example.TestRunner.Runners" time="29.761">
+    <system-out><![CDATA[
+@regression
+Scenario: user could Create new account with invalid data (Keep phone number is an empty) (Negative scenario) &amp#27;[90m# src/main/resources/features/F02_Login.feature:4&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser Navigate To home page&amp#27;[0m                                                                            &amp#27;[90m# org.example.StepDefs.Login.Step1()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser click on login Btn&amp#27;[0m                                                                                 &amp#27;[90m# org.example.StepDefs.Login.userClickOnLoginBtn()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser keep phone number is an empty&amp#27;[0m                                                                      &amp#27;[90m# org.example.StepDefs.Login.Step3()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser enter valid password&amp#27;[0m                                                                               &amp#27;[90m# org.example.StepDefs.Login.Step4()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mlogin is successfully&amp#27;[0m                                                                                  &amp#27;[90m# org.example.StepDefs.Login.Step2()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 27088
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:05:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;user could Create new account with invalid data (phone number invalid format) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](11)" classname="org.example.TestRunner.Runners" time="41.03">
+    <system-out><![CDATA[
+@regression
+Scenario: user could Create new account with invalid data (phone number invalid format) (Negative scenario) &amp#27;[90m# src/main/resources/features/F02_Login.feature:11&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser Navigate To Home page&amp#27;[0m                                                                          &amp#27;[90m# org.example.StepDefs.Login.Step5()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser click on login Btn&amp#27;[0m                                                                               &amp#27;[90m# org.example.StepDefs.Login.Step6()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser enter invalid phone number format&amp#27;[0m                                                                &amp#27;[90m# org.example.StepDefs.Login.Step7()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enter valid password&amp#27;[0m                                                                             &amp#27;[90m# org.example.StepDefs.Login.Step8()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mLogin is successfully&amp#27;[0m                                                                                &amp#27;[90m# org.example.StepDefs.Login.Step9()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 35505
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:06:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;user could Create new account with invalid data (phone number Not registered) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](12)" classname="org.example.TestRunner.Runners" time="31.23">
+    <system-out><![CDATA[
+@regression
+Scenario: user could Create new account with invalid data (phone number Not registered) (Negative scenario) &amp#27;[90m# src/main/resources/features/F02_Login.feature:18&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser[A] Navigate To Home page&amp#27;[0m                                                                       &amp#27;[90m# org.example.StepDefs.Login.Step10()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser[B] click on login Btn&amp#27;[0m                                                                            &amp#27;[90m# org.example.StepDefs.Login.Step11()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser[C] enter phone number not registered&amp#27;[0m                                                             &amp#27;[90m# org.example.StepDefs.Login.Step12()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser[D] enter valid password&amp#27;[0m                                                                          &amp#27;[90m# org.example.StepDefs.Login.Step13()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mLogin[E] is successfully&amp#27;[0m                                                                             &amp#27;[90m# org.example.StepDefs.Login.Step14()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 32532
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:07:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;user could Create new account with invalid data (password is an empty) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](13)" classname="org.example.TestRunner.Runners" time="31.099">
+    <system-out><![CDATA[
+@regression
+Scenario: user could Create new account with invalid data (password is an empty) (Negative scenario) &amp#27;[90m# src/main/resources/features/F02_Login.feature:25&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser[A] Navigate To Home Page&amp#27;[0m                                                                &amp#27;[90m# org.example.StepDefs.Login.Step15()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser[B] Click on login Btn&amp#27;[0m                                                                     &amp#27;[90m# org.example.StepDefs.Login.Step16()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser[C] enter valid phone number&amp#27;[0m                                                               &amp#27;[90m# org.example.StepDefs.Login.Step17()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser[D] enter password is an empty&amp#27;[0m                                                             &amp#27;[90m# org.example.StepDefs.Login.Step18()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mlogin[E] is Successfully&amp#27;[0m                                                                      &amp#27;[90m# org.example.StepDefs.Login.Step19()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 35165
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:07:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;user could Create new account with invalid data (password without one num) (Negative scenario)&quot;, &quot;Test Automation Functionality&quot;](14)" classname="org.example.TestRunner.Runners" time="37.926">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div[class=&quot;alert alert-danger&quot;]&quot;}&#10;  (Session info: chrome=112.0.5615.138)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;&#10;System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [c29b1a54a1f799eddebc862b2d032e2d, findElement {using=css selector, value=div[class=&quot;alert alert-danger&quot;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\FABRIC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49780}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49780/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: c29b1a54a1f799eddebc862b2d032e2d" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"div[class="alert alert-danger"]"}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c29b1a54a1f799eddebc862b2d032e2d, findElement {using=css selector, value=div[class="alert alert-danger"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\FABRIC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49780}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49780/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c29b1a54a1f799eddebc862b2d032e2d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.example.StepDefs.Login.Step24(Login.java:230)
+	at ✽.LOgin[E] is Successfully(file:///C:/Users/Fabrica%20Dev/IdeaProjects/HostN_Project/src/main/resources/features/F02_Login.feature:37)
+]]></failure>
+    <system-out><![CDATA[
+@regression
+Scenario: user could Create new account with invalid data (password without one num) (Negative scenario) &amp#27;[90m# src/main/resources/features/F02_Login.feature:32&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUSer[A] Navigate To Home Page&amp#27;[0m                                                                    &amp#27;[90m# org.example.StepDefs.Login.Step20()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUSer[B] Click on login Btn&amp#27;[0m                                                                         &amp#27;[90m# org.example.StepDefs.Login.Step21()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser[C] enter valid phone number&amp#27;[0m                                                                   &amp#27;[90m# org.example.StepDefs.Login.Step22()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser[D] enter password without one num&amp#27;[0m                                                             &amp#27;[90m# org.example.StepDefs.Login.Step23()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mLOgin[E] is Successfully&amp#27;[0m                                                                          &amp#27;[90m# org.example.StepDefs.Login.Step24()&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div[class="alert alert-danger"]"}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c29b1a54a1f799eddebc862b2d032e2d, findElement {using=css selector, value=div[class="alert alert-danger"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\FABRIC~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49780}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49780/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c29b1a54a1f799eddebc862b2d032e2d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.example.StepDefs.Login.Step24(Login.java:230)
+	at ✽.LOgin[E] is Successfully(file:///C:/Users/Fabrica%20Dev/IdeaProjects/HostN_Project/src/main/resources/features/F02_Login.feature:37)
+&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 1575
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:08:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;user could Create new account with valid data (Positive scenario)&quot;, &quot;Test Automation Functionality&quot;](15)" classname="org.example.TestRunner.Runners" time="33.356">
+    <failure message="The following asserts failed:&#10;	actual result : https://dev-api.host-n.com/  expected result : https://dev-api.host-n.com/login expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+The following asserts failed:
+	actual result : https://dev-api.host-n.com/  expected result : https://dev-api.host-n.com/login expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.StepDefs.Login.Step29(Login.java:283)
+	at ✽.LOGIN[E] Is Successfully(file:///C:/Users/Fabrica%20Dev/IdeaProjects/HostN_Project/src/main/resources/features/F02_Login.feature:44)
+]]></failure>
+    <system-out><![CDATA[
+@regression
+Scenario: user could Create new account with valid data (Positive scenario) &amp#27;[90m# src/main/resources/features/F02_Login.feature:39&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUSER[A] Navigate To Home Page&amp#27;[0m                                       &amp#27;[90m# org.example.StepDefs.Login.Step25()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUSER[B] Click on login Btn&amp#27;[0m                                            &amp#27;[90m# org.example.StepDefs.Login.Step26()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUSER[C] enter valid phone number&amp#27;[0m                                      &amp#27;[90m# org.example.StepDefs.Login.Step27()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUSER[D] enter valid password&amp#27;[0m                                          &amp#27;[90m# org.example.StepDefs.Login.Step28()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mLOGIN[E] Is Successfully&amp#27;[0m                                             &amp#27;[90m# org.example.StepDefs.Login.Step29()&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: The following asserts failed:
+	actual result : https://dev-api.host-n.com/  expected result : https://dev-api.host-n.com/login expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.StepDefs.Login.Step29(Login.java:283)
+	at ✽.LOGIN[E] Is Successfully(file:///C:/Users/Fabrica%20Dev/IdeaProjects/HostN_Project/src/main/resources/features/F02_Login.feature:44)
+&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 25833
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 02, 2023 3:08:40 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 111
+]]></system-err>
+  </testcase>
+</testsuite>

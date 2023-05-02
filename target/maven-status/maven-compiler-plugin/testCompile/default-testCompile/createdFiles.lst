@@ -1,0 +1,4 @@
+org\example\StepDefs\SingUp.class
+org\example\StepDefs\Hooks.class
+org\example\TestRunner\Runners.class
+org\example\StepDefs\Login.class

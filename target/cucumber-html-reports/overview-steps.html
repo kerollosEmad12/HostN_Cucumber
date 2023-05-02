@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>02 May 2023, 15:09</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">org.example.StepDefs.Hooks.open_Browser()</td>
+              <td>15</td>
+              <td class="duration" data-value="1824293553">1.824</td>
+              <td class="duration" data-value="1824293553">4.775</td>
+              <td class="duration" data-value="27364403300">27.364</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Hooks.quitDriver()</td>
+              <td>15</td>
+              <td class="duration" data-value="10350841500">10.350</td>
+              <td class="duration" data-value="10350841500">11.143</td>
+              <td class="duration" data-value="155262622500">2:35.262</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step1()</td>
+              <td>1</td>
+              <td class="duration" data-value="6389580700">6.389</td>
+              <td class="duration" data-value="6389580700">6.389</td>
+              <td class="duration" data-value="6389580700">6.389</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step10()</td>
+              <td>1</td>
+              <td class="duration" data-value="7638531400">7.638</td>
+              <td class="duration" data-value="7638531400">7.638</td>
+              <td class="duration" data-value="7638531400">7.638</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step11()</td>
+              <td>1</td>
+              <td class="duration" data-value="4700702600">4.700</td>
+              <td class="duration" data-value="4700702600">4.700</td>
+              <td class="duration" data-value="4700702600">4.700</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step12()</td>
+              <td>1</td>
+              <td class="duration" data-value="3037829000">3.037</td>
+              <td class="duration" data-value="3037829000">3.037</td>
+              <td class="duration" data-value="3037829000">3.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step13()</td>
+              <td>1</td>
+              <td class="duration" data-value="3035809600">3.035</td>
+              <td class="duration" data-value="3035809600">3.035</td>
+              <td class="duration" data-value="3035809600">3.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step14()</td>
+              <td>1</td>
+              <td class="duration" data-value="955000300">0.955</td>
+              <td class="duration" data-value="955000300">0.955</td>
+              <td class="duration" data-value="955000300">0.955</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step15()</td>
+              <td>1</td>
+              <td class="duration" data-value="8738419100">8.738</td>
+              <td class="duration" data-value="8738419100">8.738</td>
+              <td class="duration" data-value="8738419100">8.738</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step16()</td>
+              <td>1</td>
+              <td class="duration" data-value="4405767400">4.405</td>
+              <td class="duration" data-value="4405767400">4.405</td>
+              <td class="duration" data-value="4405767400">4.405</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step17()</td>
+              <td>1</td>
+              <td class="duration" data-value="3037784200">3.037</td>
+              <td class="duration" data-value="3037784200">3.037</td>
+              <td class="duration" data-value="3037784200">3.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step18()</td>
+              <td>1</td>
+              <td class="duration" data-value="3032831200">3.032</td>
+              <td class="duration" data-value="3032831200">3.032</td>
+              <td class="duration" data-value="3032831200">3.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step19()</td>
+              <td>1</td>
+              <td class="duration" data-value="75945300">0.075</td>
+              <td class="duration" data-value="75945300">0.075</td>
+              <td class="duration" data-value="75945300">0.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step2()</td>
+              <td>1</td>
+              <td class="duration" data-value="84945800">0.084</td>
+              <td class="duration" data-value="84945800">0.084</td>
+              <td class="duration" data-value="84945800">0.084</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step20()</td>
+              <td>1</td>
+              <td class="duration" data-value="7797572000">7.797</td>
+              <td class="duration" data-value="7797572000">7.797</td>
+              <td class="duration" data-value="7797572000">7.797</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step21()</td>
+              <td>1</td>
+              <td class="duration" data-value="4364713900">4.364</td>
+              <td class="duration" data-value="4364713900">4.364</td>
+              <td class="duration" data-value="4364713900">4.364</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step22()</td>
+              <td>1</td>
+              <td class="duration" data-value="3044812000">3.044</td>
+              <td class="duration" data-value="3044812000">3.044</td>
+              <td class="duration" data-value="3044812000">3.044</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step23()</td>
+              <td>1</td>
+              <td class="duration" data-value="3034816100">3.034</td>
+              <td class="duration" data-value="3034816100">3.034</td>
+              <td class="duration" data-value="3034816100">3.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step24()</td>
+              <td>1</td>
+              <td class="duration" data-value="7765517400">7.765</td>
+              <td class="duration" data-value="7765517400">7.765</td>
+              <td class="duration" data-value="7765517400">7.765</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step25()</td>
+              <td>1</td>
+              <td class="duration" data-value="7932551100">7.932</td>
+              <td class="duration" data-value="7932551100">7.932</td>
+              <td class="duration" data-value="7932551100">7.932</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step26()</td>
+              <td>1</td>
+              <td class="duration" data-value="4209736500">4.209</td>
+              <td class="duration" data-value="4209736500">4.209</td>
+              <td class="duration" data-value="4209736500">4.209</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step27()</td>
+              <td>1</td>
+              <td class="duration" data-value="3047812500">3.047</td>
+              <td class="duration" data-value="3047812500">3.047</td>
+              <td class="duration" data-value="3047812500">3.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step28()</td>
+              <td>1</td>
+              <td class="duration" data-value="3048850500">3.048</td>
+              <td class="duration" data-value="3048850500">3.048</td>
+              <td class="duration" data-value="3048850500">3.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step29()</td>
+              <td>1</td>
+              <td class="duration" data-value="2399799100">2.399</td>
+              <td class="duration" data-value="2399799100">2.399</td>
+              <td class="duration" data-value="2399799100">2.399</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step3()</td>
+              <td>1</td>
+              <td class="duration" data-value="3033795200">3.033</td>
+              <td class="duration" data-value="3033795200">3.033</td>
+              <td class="duration" data-value="3033795200">3.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step4()</td>
+              <td>1</td>
+              <td class="duration" data-value="3039812500">3.039</td>
+              <td class="duration" data-value="3039812500">3.039</td>
+              <td class="duration" data-value="3039812500">3.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step5()</td>
+              <td>1</td>
+              <td class="duration" data-value="17152987900">17.152</td>
+              <td class="duration" data-value="17152987900">17.152</td>
+              <td class="duration" data-value="17152987900">17.152</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step6()</td>
+              <td>1</td>
+              <td class="duration" data-value="4687655900">4.687</td>
+              <td class="duration" data-value="4687655900">4.687</td>
+              <td class="duration" data-value="4687655900">4.687</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step7()</td>
+              <td>1</td>
+              <td class="duration" data-value="3041837400">3.041</td>
+              <td class="duration" data-value="3041837400">3.041</td>
+              <td class="duration" data-value="3041837400">3.041</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step8()</td>
+              <td>1</td>
+              <td class="duration" data-value="3035814500">3.035</td>
+              <td class="duration" data-value="3035814500">3.035</td>
+              <td class="duration" data-value="3035814500">3.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.Step9()</td>
+              <td>1</td>
+              <td class="duration" data-value="1244876400">1.244</td>
+              <td class="duration" data-value="1244876400">1.244</td>
+              <td class="duration" data-value="1244876400">1.244</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.Login.userClickOnLoginBtn()</td>
+              <td>1</td>
+              <td class="duration" data-value="5423690500">5.423</td>
+              <td class="duration" data-value="5423690500">5.423</td>
+              <td class="duration" data-value="5423690500">5.423</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.NewAccountIsCreatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="68999800">0.068</td>
+              <td class="duration" data-value="68999800">0.068</td>
+              <td class="duration" data-value="68999800">0.068</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.UserClickOnSignupButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="3108810100">3.108</td>
+              <td class="duration" data-value="3108810100">3.108</td>
+              <td class="duration" data-value="3108810100">3.108</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.UserEnterValidEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="1048927400">1.048</td>
+              <td class="duration" data-value="1048927400">1.048</td>
+              <td class="duration" data-value="1048927400">1.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.UserEnterValidNumber()</td>
+              <td>1</td>
+              <td class="duration" data-value="1041966500">1.041</td>
+              <td class="duration" data-value="1041966500">1.041</td>
+              <td class="duration" data-value="1041966500">1.041</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.UserEnterValidPasswordAndConfirmPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="2146861300">2.146</td>
+              <td class="duration" data-value="2146861300">2.146</td>
+              <td class="duration" data-value="2146861300">2.146</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.UserNavigateToHomePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="8342483100">8.342</td>
+              <td class="duration" data-value="8342483100">8.342</td>
+              <td class="duration" data-value="8342483100">8.342</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.newAccountIsCreatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="847933600">0.847</td>
+              <td class="duration" data-value="847933600">0.847</td>
+              <td class="duration" data-value="847933600">0.847</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.new_AccountIsCreatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="674907400">0.674</td>
+              <td class="duration" data-value="674907400">0.674</td>
+              <td class="duration" data-value="674907400">0.674</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.steBbUserClickOnSignupButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2947816700">2.947</td>
+              <td class="duration" data-value="2947816700">2.947</td>
+              <td class="duration" data-value="2947816700">2.947</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.step1()</td>
+              <td>1</td>
+              <td class="duration" data-value="15963059300">15.963</td>
+              <td class="duration" data-value="15963059300">15.963</td>
+              <td class="duration" data-value="15963059300">15.963</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.step2()</td>
+              <td>1</td>
+              <td class="duration" data-value="1329912300">1.329</td>
+              <td class="duration" data-value="1329912300">1.329</td>
+              <td class="duration" data-value="1329912300">1.329</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.step3()</td>
+              <td>1</td>
+              <td class="duration" data-value="2090880200">2.090</td>
+              <td class="duration" data-value="2090880200">2.090</td>
+              <td class="duration" data-value="2090880200">2.090</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.step4()</td>
+              <td>1</td>
+              <td class="duration" data-value="1034862200">1.034</td>
+              <td class="duration" data-value="1034862200">1.034</td>
+              <td class="duration" data-value="1034862200">1.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.step5()</td>
+              <td>1</td>
+              <td class="duration" data-value="1026381300">1.026</td>
+              <td class="duration" data-value="1026381300">1.026</td>
+              <td class="duration" data-value="1026381300">1.026</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.step6()</td>
+              <td>1</td>
+              <td class="duration" data-value="2124487500">2.124</td>
+              <td class="duration" data-value="2124487500">2.124</td>
+              <td class="duration" data-value="2124487500">2.124</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.step7()</td>
+              <td>1</td>
+              <td class="duration" data-value="803947100">0.803</td>
+              <td class="duration" data-value="803947100">0.803</td>
+              <td class="duration" data-value="803947100">0.803</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepAUserNavigateToHomePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="45457180400">45.457</td>
+              <td class="duration" data-value="45457180400">45.457</td>
+              <td class="duration" data-value="45457180400">45.457</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepAUser_NavigateToHomePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="9441416700">9.441</td>
+              <td class="duration" data-value="9441416700">9.441</td>
+              <td class="duration" data-value="9441416700">9.441</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepA_UserNavigateToHomePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="12035221600">12.035</td>
+              <td class="duration" data-value="12035221600">12.035</td>
+              <td class="duration" data-value="12035221600">12.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepA_User_NavigateToHomePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="7223577300">7.223</td>
+              <td class="duration" data-value="7223577300">7.223</td>
+              <td class="duration" data-value="7223577300">7.223</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepBUserClickOnSignupButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2284862800">2.284</td>
+              <td class="duration" data-value="2284862800">2.284</td>
+              <td class="duration" data-value="2284862800">2.284</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepBUser_ClickOnSignupButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="1445949300">1.445</td>
+              <td class="duration" data-value="1445949300">1.445</td>
+              <td class="duration" data-value="1445949300">1.445</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepB_UserClickOnSignupButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2245862300">2.245</td>
+              <td class="duration" data-value="2245862300">2.245</td>
+              <td class="duration" data-value="2245862300">2.245</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepB_User_ClickOnSignupButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2195873300">2.195</td>
+              <td class="duration" data-value="2195873300">2.195</td>
+              <td class="duration" data-value="2195873300">2.195</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepCUserEnterValidLastNameFirstName()</td>
+              <td>1</td>
+              <td class="duration" data-value="2076911900">2.076</td>
+              <td class="duration" data-value="2076911900">2.076</td>
+              <td class="duration" data-value="2076911900">2.076</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepCUser_EnterValidLastNameFirstName()</td>
+              <td>1</td>
+              <td class="duration" data-value="2098908400">2.098</td>
+              <td class="duration" data-value="2098908400">2.098</td>
+              <td class="duration" data-value="2098908400">2.098</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepC_UserEnterValidLastNameFirstName()</td>
+              <td>1</td>
+              <td class="duration" data-value="2087911600">2.087</td>
+              <td class="duration" data-value="2087911600">2.087</td>
+              <td class="duration" data-value="2087911600">2.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepC_User_EnterValidLastNameFirstName()</td>
+              <td>1</td>
+              <td class="duration" data-value="2083872800">2.083</td>
+              <td class="duration" data-value="2083872800">2.083</td>
+              <td class="duration" data-value="2083872800">2.083</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepEUserEnterNumberAnEmpty()</td>
+              <td>1</td>
+              <td class="duration" data-value="1034938900">1.034</td>
+              <td class="duration" data-value="1034938900">1.034</td>
+              <td class="duration" data-value="1034938900">1.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepEUserEnterValidNumber()</td>
+              <td>1</td>
+              <td class="duration" data-value="1043926100">1.043</td>
+              <td class="duration" data-value="1043926100">1.043</td>
+              <td class="duration" data-value="1043926100">1.043</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepEUser_EnterValidNumber()</td>
+              <td>1</td>
+              <td class="duration" data-value="1037924100">1.037</td>
+              <td class="duration" data-value="1037924100">1.037</td>
+              <td class="duration" data-value="1037924100">1.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepE_UserEnterInvalidNumberFormat()</td>
+              <td>1</td>
+              <td class="duration" data-value="1044001400">1.044</td>
+              <td class="duration" data-value="1044001400">1.044</td>
+              <td class="duration" data-value="1044001400">1.044</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepE_UserEnterValidNumber()</td>
+              <td>1</td>
+              <td class="duration" data-value="1043903100">1.043</td>
+              <td class="duration" data-value="1043903100">1.043</td>
+              <td class="duration" data-value="1043903100">1.043</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepFUserEnterValidEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="1046931800">1.046</td>
+              <td class="duration" data-value="1046931800">1.046</td>
+              <td class="duration" data-value="1046931800">1.046</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepFUser_EnterValidEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="3150687500">3.150</td>
+              <td class="duration" data-value="3150687500">3.150</td>
+              <td class="duration" data-value="3150687500">3.150</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepF_UserEnterValidEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="3398728500">3.398</td>
+              <td class="duration" data-value="3398728500">3.398</td>
+              <td class="duration" data-value="3398728500">3.398</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepF_User_EnterValidEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="3157825200">3.157</td>
+              <td class="duration" data-value="3157825200">3.157</td>
+              <td class="duration" data-value="3157825200">3.157</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepGUserEnterInvalidPasswordFormatAndValidConfirmPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="2083849700">2.083</td>
+              <td class="duration" data-value="2083849700">2.083</td>
+              <td class="duration" data-value="2083849700">2.083</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepGUserEnterPasswordAndConfirmPasswordIsAnEmpty()</td>
+              <td>1</td>
+              <td class="duration" data-value="2095875100">2.095</td>
+              <td class="duration" data-value="2095875100">2.095</td>
+              <td class="duration" data-value="2095875100">2.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepGUserEnterValidPasswordAndConfirmPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="2155744800">2.155</td>
+              <td class="duration" data-value="2155744800">2.155</td>
+              <td class="duration" data-value="2155744800">2.155</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepGUserEnterValidPasswordFormatAndInvalidConfirmPasswordFormat()</td>
+              <td>1</td>
+              <td class="duration" data-value="2077852700">2.077</td>
+              <td class="duration" data-value="2077852700">2.077</td>
+              <td class="duration" data-value="2077852700">2.077</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepG_UserEnterValidPasswordAndConfirmPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="2135754200">2.135</td>
+              <td class="duration" data-value="2135754200">2.135</td>
+              <td class="duration" data-value="2135754200">2.135</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepHNewAccountIsCreatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="70979400">0.070</td>
+              <td class="duration" data-value="70979400">0.070</td>
+              <td class="duration" data-value="70979400">0.070</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepHNewAccount_IsCreatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="731966400">0.731</td>
+              <td class="duration" data-value="731966400">0.731</td>
+              <td class="duration" data-value="731966400">0.731</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepH_NewAccountIsCreatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="691957700">0.691</td>
+              <td class="duration" data-value="691957700">0.691</td>
+              <td class="duration" data-value="691957700">0.691</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.stepH_NewAccount_IsCreatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="839895200">0.839</td>
+              <td class="duration" data-value="839895200">0.839</td>
+              <td class="duration" data-value="839895200">0.839</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.step_AUserNavigateToHomePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="15642116500">15.642</td>
+              <td class="duration" data-value="15642116500">15.642</td>
+              <td class="duration" data-value="15642116500">15.642</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.step_CUserEnterValidLastNameFirstName()</td>
+              <td>1</td>
+              <td class="duration" data-value="2082864900">2.082</td>
+              <td class="duration" data-value="2082864900">2.082</td>
+              <td class="duration" data-value="2082864900">2.082</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.step_FUserEnterValidEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="3169763900">3.169</td>
+              <td class="duration" data-value="3169763900">3.169</td>
+              <td class="duration" data-value="3169763900">3.169</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.step_HNewAccountIsCreatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="82974800">0.082</td>
+              <td class="duration" data-value="82974800">0.082</td>
+              <td class="duration" data-value="82974800">0.082</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.userClickOnSignupButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2540824000">2.540</td>
+              <td class="duration" data-value="2540824000">2.540</td>
+              <td class="duration" data-value="2540824000">2.540</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.userEnterValidEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="1049977300">1.049</td>
+              <td class="duration" data-value="1049977300">1.049</td>
+              <td class="duration" data-value="1049977300">1.049</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.userEnterValidLastNameAnEmptyFirstName()</td>
+              <td>1</td>
+              <td class="duration" data-value="2102828300">2.102</td>
+              <td class="duration" data-value="2102828300">2.102</td>
+              <td class="duration" data-value="2102828300">2.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.userEnterValidLastNameAndFirstName()</td>
+              <td>1</td>
+              <td class="duration" data-value="2091911400">2.091</td>
+              <td class="duration" data-value="2091911400">2.091</td>
+              <td class="duration" data-value="2091911400">2.091</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.userEnterValidLastNameWithOneCharacterFirstName()</td>
+              <td>1</td>
+              <td class="duration" data-value="2087909200">2.087</td>
+              <td class="duration" data-value="2087909200">2.087</td>
+              <td class="duration" data-value="2087909200">2.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.userEnterValidNumber()</td>
+              <td>1</td>
+              <td class="duration" data-value="1051917300">1.051</td>
+              <td class="duration" data-value="1051917300">1.051</td>
+              <td class="duration" data-value="1051917300">1.051</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.userEnterValidPasswordAndConfirmPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="2172879700">2.172</td>
+              <td class="duration" data-value="2172879700">2.172</td>
+              <td class="duration" data-value="2172879700">2.172</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.userNavigateToHomePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="22144675300">22.144</td>
+              <td class="duration" data-value="22144675300">22.144</td>
+              <td class="duration" data-value="22144675300">22.144</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.userNavigateToHomepage()</td>
+              <td>1</td>
+              <td class="duration" data-value="16503016400">16.503</td>
+              <td class="duration" data-value="16503016400">16.503</td>
+              <td class="duration" data-value="16503016400">16.503</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.user_ClickOnSignupButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="1284920200">1.284</td>
+              <td class="duration" data-value="1284920200">1.284</td>
+              <td class="duration" data-value="1284920200">1.284</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.user_EnterValidEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="1048934200">1.048</td>
+              <td class="duration" data-value="1048934200">1.048</td>
+              <td class="duration" data-value="1048934200">1.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.user_EnterValidNumber()</td>
+              <td>1</td>
+              <td class="duration" data-value="1037975500">1.037</td>
+              <td class="duration" data-value="1037975500">1.037</td>
+              <td class="duration" data-value="1037975500">1.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.StepDefs.SingUp.user_EnterValidPasswordAndConfirmPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="2161815300">2.161</td>
+              <td class="duration" data-value="2161815300">2.161</td>
+              <td class="duration" data-value="2161815300">2.161</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>95</td>
+            <td>123</td>
+            <td class="duration">4.532</td>
+            <td class="duration">2:35.262</td>
+            <td class="duration">9:17.446</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
