@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class Hooks {
 
-    static WebDriver driver = null;
+    public static WebDriver driver = null;
 
     @Before
     public void open_Browser ()
