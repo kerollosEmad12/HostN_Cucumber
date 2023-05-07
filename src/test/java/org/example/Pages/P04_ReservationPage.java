@@ -38,10 +38,10 @@ public class P04_ReservationPage {
     @FindBy (css = "input[id=\"demo\"]")
     public WebElement dateMonth;
 
-    @FindBy (css = "div[class=\"drp-calendar left\"] tr>td[data-title=\"r1c1\"]")
+    @FindBy (css = "div[class=\"drp-calendar left\"] td[data-title=\"r1c0\"]")
     public WebElement dateDayFrom;
 
-    @FindBy (css = "div[class=\"drp-calendar left\"] tr>td[data-title=\"r2c4\"]")
+    @FindBy (css = "div[class=\"drp-calendar left\"] td[data-title=\"r1c6\"]")
     public WebElement dateDayTo;
 
     @FindBy (css = "button[class=\"applyBtn btn btn-sm btn-primary\"]")

@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.Pages.P04_ReservationPage;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
@@ -13,6 +14,8 @@ import static org.example.StepDefs.Hooks.driver;
 public class Reservations {
     JavascriptExecutor js = (JavascriptExecutor) driver;
     P04_ReservationPage reservation = new P04_ReservationPage();
+
+    Actions action = new Actions(driver);
     @Given("user go to home page")
     public void step1()
     {
@@ -68,11 +71,13 @@ public class Reservations {
         Thread.sleep(Duration.ofSeconds(1));
 
         //calendar left day from
-        js.executeScript("arguments[0].click();", reservation.dateDayFrom);
+        action.moveToElement(reservation.dateDayFrom).perform();
+        action.click(reservation.dateDayFrom).perform();
         Thread.sleep(Duration.ofSeconds(1));
 
         //calendar left day to
-        js.executeScript("arguments[0].click();", reservation.dateDayTo);
+        action.moveToElement(reservation.dateDayTo).perform();
+        action.click(reservation.dateDayTo).perform();
         Thread.sleep(Duration.ofSeconds(1));
 
         //Apply
