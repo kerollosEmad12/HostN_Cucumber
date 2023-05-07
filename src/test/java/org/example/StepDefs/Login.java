@@ -2,11 +2,8 @@ package org.example.StepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.example.Pages.P01_HomePage;
 import org.example.Pages.P03_LoginPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.Color;
 import org.testng.asserts.SoftAssert;
 
