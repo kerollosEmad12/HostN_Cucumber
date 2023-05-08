@@ -17,7 +17,6 @@ import static org.example.StepDefs.Hooks.driver;
 public class SingUp {
 
     public static String globalEmail;
-
     P01_HomePage home = new P01_HomePage();
     P02_RegisterPage signup = new P02_RegisterPage();
     JavascriptExecutor js = (JavascriptExecutor) driver;
