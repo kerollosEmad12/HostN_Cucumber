@@ -23,9 +23,9 @@ public class P03_LoginPage {
     @FindBy (css = "button[type=\"submit\"]")
     public WebElement submit;
 
-    @FindBy (css = "div[class=\"alert alert-danger\"]")
+    @FindBy (xpath = "//div[@class=\"alert alert-danger\"]")
     public WebElement actualMge;
 
-    @FindBy (css = "div[class=\"alert alert-danger\"]")
+    @FindBy (xpath = "//div[@class=\"alert alert-danger\"]")
     public WebElement color;
 }

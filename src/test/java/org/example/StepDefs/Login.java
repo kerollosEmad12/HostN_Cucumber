@@ -207,8 +207,8 @@ public class Login {
         SoftAssert soft = new SoftAssert();
         //1- assert url equal or contains https://dev-api.host-n.com/login
         String actualUrl = driver.getCurrentUrl();
-        soft.assertTrue(actualUrl.contains("https://dev-api.host-n.com/login"),
-                "actual result : "+actualUrl + "  " + "expected result : " +  "https://dev-api.host-n.com/login"
+        soft.assertTrue(actualUrl.contains("https://api.host-n.com/login"),
+                "actual result : "+actualUrl + "  " + "expected result : " +  "https://api.host-n.com/login"
         );
 
         //2- message content or equal "Login credential are invalid."
