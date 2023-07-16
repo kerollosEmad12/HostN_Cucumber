@@ -15,7 +15,7 @@ import java.time.Duration;
 
 import static org.example.StepDefs.Hooks.driver;
 
-public class SingUp {
+public class Register {
 
     public static String globalEmail;
     P01_HomePage home = new P01_HomePage();
