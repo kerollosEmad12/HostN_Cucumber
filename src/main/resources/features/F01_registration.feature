@@ -1,84 +1,71 @@
 @regression
 Feature: Test Automation Functionality
 
-  @smoke
-  Scenario: user could Create new account with valid data (Positive scenario)
+  Background:
     Given user navigate to home page
     And user click on signup button
-    And user enter valid last name and first name
+
+ Scenario Outline: user could Create new account with invalid data (first name and last name)
+    And user enter valid last name "<first_name>" and first name "<last_name>"
     And user enter valid number
     And user enter valid email
-    And user enter valid password and confirm password
+    And user enter valid password "123456789" and confirm password "123456789"
     Then new account is created successfully
+   Examples:
+   | first_name  | last_name |
+   |             | DEV       |
+   | f           | DEV       |
+   | fa          | DEV       |
+   | fabrica     |           |
+   | fabrica     | D         |
+   | fabrica     | De        |
 
-  Scenario: user could Create new account with invalid data (first name is an empty) (Negative scenario)
-    Given User navigate to home page
-    And User click on signup button
-    And user enter valid last name an empty first name
-    And User enter valid number
-    And User enter valid email
-    And User enter valid password and confirm password
-    Then New account is created successfully
+  Scenario Outline: user could Create new account with invalid data (phone number)
+    And user could enter valid last name "fabrica" and first name "DEV"
+    And user could enter valid number "<phone_number>"
+    And user could enter valid email
+    And user could enter valid password "123456789" and confirm password "123456789"
+    Then user could created new account successfully "<result>"
+    Examples:
+      | phone_number | result |
+      |              | failure|
+      | 0125489355   | failure|
+      | 656587566882 | failure|
+      | 0103358asd97 | failure|
+      | 0103358477 5 | failure|
+      | 01033584776  | failure|
 
-  Scenario: User could Create new account with invalid data (first name with one character) (Negative scenario)
-    Given User Navigate to home page
-    And User Click on signup button
-    And user enter valid last name with one character first name
-    And User Enter valid number
-    And User Enter valid email
-    And User Enter valid password and confirm password
-    Then New Account is created successfully
+  Scenario Outline: user could Create new account with invalid data (email)
+    And Register should be possible if enter valid last name "fabrica" and first name "DEV"
+    And Register should be possible if enter valid number
+    And Register should be possible if enter valid email "<email>"
+    And Register should be possible if enter valid password "123456789" and confirm password "123456789"
+    Then Register should be possible if user created new account successfully "<result>"
+    Examples:
+      |          email          | result |
+      |                         | failure|
+      | m.elzoghbi24gmail.com   | failure|
+      | m.elzoghbi24@gmail      | failure|
+      | @gmail.com              | failure|
+      | m.elzoghbi24@@gmail.com | failure|
+      | m.elzoghbi24@-gmail.com | failure|
+      | m.elzoghbi24@ gmail.com | failure|
+      | m.elzoghbi24@gmail.com  | failure|
 
-  Scenario: User could Create new account with invalid data (Invalid phone number ) (Negative scenario)
-    Given StepA User Navigate to home page
-    And StepB User Click on signup button
-    And StepC user enter valid last name first name
-    And StepE User Enter phone number missing number
-    And StepF User Enter valid email
-    And StepG User Enter valid password and confirm password
-    Then StepH New Account is created successfully
-
-  Scenario: User could Create new account with invalid data (Empty phone number ) (Negative scenario)
-    Given stepA User Navigate to home page
-    And stepB User Click on signup button
-    And stepC user enter valid last name first name
-    And stepE User Enter number an empty
-    And stepF User Enter valid email
-    And stepG User Enter valid password and confirm password
-    Then stepH New Account is created successfully
-
-    Scenario: User could Create new account with invalid data (Invalid phone number format) (Negative scenario)
-      Given step[A] User Navigate to home page
-      And step[B] User Click on signup button
-      And step[C] user enter valid last name first name
-      And stepE User Enter invalid number format
-      And step[F] User Enter valid email
-      And step[G] User Enter valid password and confirm password
-      Then step[H] New Account is created successfully
-
-    Scenario:  User could Create new account with invalid data (Password and confirm password is an empty) (Negative scenario)
-      Given Step[A] User Navigate to home page
-      And Step[B] User Click on signup button
-      And Step[C] user enter valid last name first name
-      And Step[E] User Enter valid number
-      And Step[F] User Enter valid email
-      And step[G] User Enter password and confirm password is an empty
-      Then Step[H] New Account is created successfully
-
-    Scenario:  User could Create new account with invalid data (Password is invalid format) (Negative scenario)
-      Given STep[A] User Navigate to home page
-      And STep[B] User Click on signup button
-      And STep[C] user enter valid last name first name
-      And STep[E] User Enter valid number
-      And STep[F] User Enter valid email
-      And step[G] User Enter invalid password format and valid confirm password
-      Then STep[H] New Account is created successfully
-
-    Scenario:  User could Create new account with invalid data (Confirm Password is invalid format) (Negative scenario)
-      Given STEp[A] User Navigate to home page
-      And STEp[B] User Click on signup button
-      And STEp[C] user enter valid last name first name
-      And STEp[E] User Enter valid number
-      And STEp[F] User Enter valid email
-      And step[G] User Enter valid password format and invalid confirm password format
-      Then STEp[H] New Account is created successfully
+  Scenario Outline: user could Create new account with invalid data (password and confirm password)
+    And user could input valid last name "fabrica" and first name "DEV"
+    And user could input valid number
+    And user could input valid email
+    And user could input invalid password "<password>" and confirm password "<confirm_password>"
+    Then user could created new account submitted
+    Examples:
+      | password | confirm_password |
+      |          | 123456789        |
+      | 1        | 123456789        |
+      | 12       | 123456789        |
+      | !#@$^*&^*| 123465789        |
+      | 1234567  | 123456789        |
+      | 123456789|                  |
+      | 123456789| 2548768          |
+      | 123456789| 12345678!        |
+      | 123456789| 123456721        |
