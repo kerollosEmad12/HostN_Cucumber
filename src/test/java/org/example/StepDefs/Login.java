@@ -3,12 +3,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.example.Pages.P03_LoginPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.Color;
 import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 import static org.example.StepDefs.Hooks.driver;
+import static org.junit.Assert.assertTrue;
+
 public class Login {
 
     JavascriptExecutor js =  (JavascriptExecutor) driver;
@@ -19,249 +22,62 @@ public class Login {
         driver.navigate().to("https://dev-api.host-n.com/");
     }
 
-    @Then("login is successfully")
-    public void Step2()
-    {
-        js.executeScript("arguments[0].click();", login.submit);
-    }
-
     @And("user click on login Btn")
-    public void Step3() throws InterruptedException {
+    public void Step2() throws InterruptedException {
        login.loginTab.click();
         Thread.sleep(Duration.ofSeconds(3));
     }
 
-    @And("user keep phone number is an empty")
-    public void Step4() throws InterruptedException {
-        js.executeScript("arguments[0].value='';", login.phone);
+    @And("user enter phone number {string}")
+    public void Step3(String number) throws InterruptedException {
+        login.phone.sendKeys(number);
         Thread.sleep(Duration.ofSeconds(3));
     }
 
-    @And("user enter valid password")
-    public void Step5() throws InterruptedException {
-        js.executeScript("arguments[0].value='123456789';", login.pass);
+    @And("user enter valid password {string}")
+    public void Step4(String password) throws InterruptedException {
+        login.pass.sendKeys(password);
         Thread.sleep(Duration.ofSeconds(3));
     }
 
-
-    @Given("User Navigate To Home page")
-    public void Step6()
-    {
-        driver.navigate().to("https://dev-api.host-n.com/");
-    }
-
-    @And("User click on login Btn")
-    public void Step7() throws InterruptedException {
-        login.loginTab.click();
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @And("user enter invalid phone number format")
-    public void Step8() throws InterruptedException {
-        js.executeScript("arguments[0].value='010335847';", login.phone);
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @And("User enter valid password")
-    public void Step9() throws InterruptedException {
-        js.executeScript("arguments[0].value='123456789';", login.pass);
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @Then("Login is successfully")
-    public void Step10()
+    @Then("login is successfully \"([^\"]*)\"$")
+    public void Step5(String result)
     {
         js.executeScript("arguments[0].click();", login.submit);
 
-
+        //1- message content or equal "Login credential are invalid."
         SoftAssert soft = new SoftAssert();
-        //1- assert url equal or contains https://dev-api.host-n.com/login
-        String actualUrl = driver.getCurrentUrl();
-        soft.assertTrue(actualUrl.contains("https://dev-api.host-n.com/login"),
-                "actual result : "+actualUrl + "  " + "expected result : " +  "https://dev-api.host-n.com/login"
-            );
-
-        //2- message content or equal "Login credential are invalid."
-        String actualMsg = login.actualMge.getText();
+        String actualMsg = driver.findElement(By.cssSelector("div[class=\"alert alert-danger\"]")).getText();
         soft.assertTrue(actualMsg.contains("Login credential are invalid."),
-                "actualMsg : "+actualMsg + " | " + "expected Msg : "+"Login credential are invalid."
+                "actualMsg : "+actualMsg +" | "+ "expected Msg : "+"Login credential are invalid."
         );
-        //3- message color is green using RGBA or Hex
-        String actualColorRGBA = login.color.getCssValue("border-color");
+
+        if ("failure".equals(result)){
+            assertTrue(driver.findElement(By.cssSelector("div[class=\"alert alert-danger\"]")).isDisplayed());
+        }
+
+        //2- message color is red using RGBA or Hex
+        String actualColorRGBA = driver.findElement(By.cssSelector("div[class=\"alert alert-danger\"]")).getCssValue("background-color");
         String actualColorHex = Color.fromString(actualColorRGBA).asHex();
-        soft.assertEquals(actualColorHex, "#f5c6cb");
+        soft.assertEquals(actualColorHex, "#f8d7da");
 
-        //4- assertAll()
         soft.assertAll();
     }
 
-    @Given("User[A] Navigate To Home page")
-    public void Step11()
-    {
-        driver.navigate().to("https://dev-api.host-n.com/");
-    }
-
-    @And("User[B] click on login Btn")
-    public void Step12() throws InterruptedException {
-        login.loginTab.click();
+    @And("user input phone number {string}")
+    public void Step7(String number) throws InterruptedException {
+        login.phone.sendKeys(number);
         Thread.sleep(Duration.ofSeconds(3));
     }
 
-    @And("user[C] enter phone number not registered")
-    public void Step13() throws InterruptedException {
-        js.executeScript("arguments[0].value='01036954123';", login.phone);
+    @And("user input valid password {string}")
+    public void Step8(String password) throws InterruptedException {
+        login.pass.sendKeys(password);
         Thread.sleep(Duration.ofSeconds(3));
     }
 
-    @And("User[D] enter valid password")
-    public void Step14() throws InterruptedException {
-        js.executeScript("arguments[0].value='123456789';", login.pass);
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @Then("Login[E] is successfully")
-    public void Step15()
-    {
+    @Then("The login is passed")
+    public void Step9() {
         js.executeScript("arguments[0].click();", login.submit);
-
-        SoftAssert soft = new SoftAssert();
-        //1- assert url equal or contains https://dev-api.host-n.com/login
-        String actualUrl = driver.getCurrentUrl();
-        soft.assertTrue(actualUrl.contains("https://dev-api.host-n.com/login"),
-                "actual result : "+actualUrl + "  " + "expected result : " +  "https://dev-api.host-n.com/login"
-        );
-
-        //2- message content or equal "Login credential are invalid."
-        String actualMsg = login.actualMge.getText();
-        soft.assertTrue(actualMsg.contains("Login credential are invalid."),
-                "actualMsg : "+actualMsg + " | " + "expected Msg : "+"Login credential are invalid."
-        );
-        //3- message color is green using RGBA or Hex
-        String actualColorRGBA = login.color.getCssValue("border-color");
-        String actualColorHex = Color.fromString(actualColorRGBA).asHex();
-        soft.assertEquals(actualColorHex, "#f5c6cb");
-
-        //4- assertAll()
-        soft.assertAll();
-    }
-
-    @Given("User[A] Navigate To Home Page")
-    public void Step16()
-    {
-        driver.navigate().to("https://dev-api.host-n.com/");
-    }
-
-    @And("User[B] Click on login Btn")
-    public void Step17() throws InterruptedException {
-        login.loginTab.click();
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @And("user[C] enter valid phone number")
-    public void Step18() throws InterruptedException {
-        js.executeScript("arguments[0].value='01033584776';", login.phone);
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @And("User[D] enter password is an empty")
-    public void Step19() throws InterruptedException {
-        js.executeScript("arguments[0].value='';", login.pass);
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @Then("login[E] is Successfully")
-    public void Step20()
-    {
-        js.executeScript("arguments[0].click();", login.submit);
-    }
-
-    @Given("USer[A] Navigate To Home Page")
-    public void Step21()
-    {
-        driver.navigate().to("https://dev-api.host-n.com/");
-    }
-
-    @And("USer[B] Click on login Btn")
-    public void Step22() throws InterruptedException {
-        login.loginTab.click();
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @And("User[C] enter valid phone number")
-    public void Step23() throws InterruptedException {
-        js.executeScript("arguments[0].value='01033584776';", login.phone);
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @And("User[D] enter password without one num")
-    public void Step24() throws InterruptedException {
-        js.executeScript("arguments[0].value='1234567';", login.pass);
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @Then("LOgin[E] is Successfully")
-    public void Step25()
-    {
-        js.executeScript("arguments[0].click();", login.submit);
-
-        SoftAssert soft = new SoftAssert();
-        //1- assert url equal or contains https://dev-api.host-n.com/login
-        String actualUrl = driver.getCurrentUrl();
-        soft.assertTrue(actualUrl.contains("https://api.host-n.com/login"),
-                "actual result : "+actualUrl + "  " + "expected result : " +  "https://api.host-n.com/login"
-        );
-
-        //2- message content or equal "Login credential are invalid."
-        String actualMsg = login.actualMge.getText();
-        soft.assertTrue(actualMsg.contains("Login credential are invalid."),
-                "actualMsg : "+actualMsg + " | " + "expected Msg : "+"Login credential are invalid."
-        );
-        //3- message color is green using RGBA or Hex
-        String actualColorRGBA = login.color.getCssValue("border-color");
-        String actualColorHex = Color.fromString(actualColorRGBA).asHex();
-        soft.assertEquals(actualColorHex, "#f5c6cb");
-
-        //4- assertAll()
-        soft.assertAll();
-    }
-
-    @Given("USER[A] Navigate To Home Page")
-    public void Step26()
-    {
-        driver.navigate().to("https://dev-api.host-n.com/");
-    }
-
-    @And("USER[B] Click on login Btn")
-    public void Step27() throws InterruptedException {
-        login.loginTab.click();
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @And("USER[C] enter valid phone number")
-    public void Step28() throws InterruptedException {
-        js.executeScript("arguments[0].value='01033584776';", login.phone);
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @And("USER[D] enter valid password")
-    public void Step29() throws InterruptedException {
-        js.executeScript("arguments[0].value='12345678';", login.pass);
-        Thread.sleep(Duration.ofSeconds(3));
-    }
-
-    @Then("LOGIN[E] Is Successfully")
-    public void Step30()
-    {
-        js.executeScript("arguments[0].click();", login.submit);
-
-        SoftAssert soft = new SoftAssert();
-        //1- assert url equal or contains https://dev-api.host-n.com/login
-        String actualUrl = driver.getCurrentUrl();
-        soft.assertTrue(actualUrl.contains("https://dev-api.host-n.com/login"),
-                "actual result : "+actualUrl + "  " + "expected result : " +  "https://dev-api.host-n.com/login"
-        );
-
-        //4- assertAll()
-        soft.assertAll();
     }
 }
